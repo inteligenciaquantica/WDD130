@@ -1,0 +1,33 @@
+body{
+    height: 800px;
+    width: 600px;
+}
+
+main {
+    width:100%;
+    margin: 0;
+   
+}
+
+footer{
+    background-color:darkgray;
+    width:100%;
+    margin: 0;
+    
+}
+
+div{
+    display:inline;
+    width: 33%;
+    text-align: center;
+}
+
+footer img{
+    width:15%;
+    margin:7%;
+    border-radius: 150px;
+    border-color:black;
+    border-width: 10px;
+    border-style: solid;
+    display:inline;
+}
