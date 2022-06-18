@@ -36,6 +36,9 @@ body {
   font-size: 18px;
   text-align: center;
 }
+form{
+  font-size: 10px;
+}
 img {
   display: block;
   margin: 0 auto;
@@ -58,6 +61,7 @@ header {
   text-align: center;
   color: var(--paragraph-color-on-color);
   background-color: var(--paragraph-background-color);
+  border-radius: 25px;
 }
 header > h1, header > h2 {
   color: var(--headline-color-on-color);
@@ -67,6 +71,47 @@ p {
   color: var(--paragraph-color);
   padding: 1em;
 }
+
+.search{
+  width: 50px;
+  background: url(images/search-icon.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.container{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.graph_1{
+  grid-template-columns: 1/2;
+  grid-template-rows: 1/2;
+}
+
+.text_1{
+  grid-template-columns: 2/3;
+  grid-template-rows: 1/2;
+}
+.graph_2{
+  grid-template-columns: 2/3;
+  grid-template-rows: 2/3;
+}
+
+.text_2{
+  grid-template-columns: 1/2;
+  grid-template-rows: 2/3;
+}
+.graph_3{
+  grid-template-columns: 1/2;
+  grid-template-rows: 3/4;
+}
+
+.text_3{
+  grid-template-columns: 2/3;
+  grid-template-rows: 3/4;
+}
+
+
 .colors {
   width: 100%;
   min-width: 350px;
@@ -101,6 +146,7 @@ nav {
   line-height: 3em;
   text-align: center;
   font-size: 1.2em;
+  border-radius: 25px;
 }
 nav  {
   list-style-type: none;
@@ -161,4 +207,38 @@ nav a:hover {
   grid-area: right;
   border-top: 1px solid;
   border-right: 1px solid;
+}
+.logo-box{
+  border-radius: 10px;
+  display: inline;
+  width:150px;
+}
+
+
+footer {
+  background-color: #69c29a ;
+  color: blue;
+  padding: 25px 50px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.icon {
+  width: 80px;
+  padding-top: 10px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer h3 a:hover {
+  text-decoration: none;
+}
+
+footer .social img {
+  padding-top: 15px;
 }
