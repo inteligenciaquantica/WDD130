@@ -218,7 +218,55 @@ footer .social img {
 main section img {
     box-sizing: border-box;
 }
+#contactus-title{
+    font-size: 3em;
+    color: white;
+    text-align: center;
+}
 
+#form-one{
+    background-color:antiquewhite;
+    border: black solid 2px;
+    border-radius: 25px;
+    grid-column: 4/8;
+    font-size: 0.8em;
+}
+ul{
+    display:block;
+}
+ul li{
+    list-style-type: none;
+    margin: 10px;
+}
+
+input{
+    width:80%;
+    border-radius: 5px;
+}
+textarea{
+    width:75%;
+    height:100px;
+    border-radius: 5px;
+}
+
+#button-submit{
+    background-color: white;
+    border-radius: 5px;
+}
+
+#feedback{
+    background-color: antiquewhite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .5em;
+    /* make this element invisible until we are ready for it */
+    display: none;   
+}
+.moveDown {
+    margin-top: 3em;
+}
 
 
 @media screen and (max-width: 900px) {
@@ -277,4 +325,6 @@ main section img {
     footer {
         margin-top: 25px;
     }
+
+    
 }
