@@ -79,7 +79,7 @@ header {
   /*background-color: var(--paragraph-background-color);*/
   background-image: url(biostatistics.png);
   background-repeat: no-repeat;
-  background-size: 100% 120%;
+  /*background-size: 100% 120%;*/
   background-position: center;
   border-radius: 25px;
 }
