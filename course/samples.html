@@ -11,22 +11,23 @@
     <header>
         <nav>
             <a href="#"><img class="logo-box" alt="My Logo" src="images/logo.png" /></a>
-            <a href="site-plan.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="samples.html">Samples</a>
             <a href="contactus.html">Contact Us</a>
+            <a href="findus.html">Find Us</a>
             <form>
                 
                 <input type="text" id="fname" name="fname">
-                <input class="search" type="submit" value="Search">
+                <input class="search" id="search" type="submit" value="Search">
             </form>
         </nav>
         <h1>Biostatistics - A living course!</h1>
         <h2>Jorge Echeimberg</h2>
         <h2>WDD 130-01</h2>
-        <!-- In the header above, add the name of your site, your name and class number. For example if you are in section 3 you would put WDD 130-03 -->
+        <a class="inner-link" href="samples.html#footer" name="header" alt="bottom">&or;</a>
     </header>
     <main>
-
+        <div id="feedback"></div>
         <hr />
         <h2>Samples</h2>
        <div class="container">
@@ -75,6 +76,7 @@
             <div class="sm-home">Home</div>
             <div class="sm-page2">Samples</div>
             <div class="sm-page3">Contact Us</div>
+            <div class="sm-page4">Find Us</div>
 
             <div class="top">&nbsp;</div>
             <div class="left">&nbsp;</div>
@@ -102,6 +104,7 @@
         <h3> Bio&sum;tat &copy; 2022 - Jorge Echeimberg</h3>
         <h3><a href="samples.html">Samples</a></h3>
         <h3><a href="contactus.html">Contact Us</a></h3>
+        <h3><a href="findus.html">Find Us</a></h3>
         <div class="social">
             <a href="https://facebook.com" target="_blank">
                 <img src="images/facebook.png" alt="fb icon">
@@ -113,7 +116,49 @@
                 <img src="images/instagram.png" alt="instagram icon">
             </a>
         </div>
+        <a class="inner-link" href="samples.html#header" name="footer" alt="top">&and;</a>
     </footer>
+
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // get the textarea input
+        const btSubmit = document.getElementById('search');
+        const btSearch = document.getElementById('fname');
+        // add a 'listener' to wait for a mouse click on textarea
+        btSubmit.addEventListener('click',function(){
+            if(btSearch.value == ''){
+                // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+                formElement.addEventListener('submit', function(e) {
+                // stop the form from doing the default action.
+                e.preventDefault();
+                // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+                feedbackElement.innerHTML = 'Hello, you need to write down something!';
+                // make the feedback element visible.
+                feedbackElement.style.display = "block";
+                // add a class to move everything down so our message doesn't cover it.
+                document.body.classList.toggle('moveDown');
+        });
+            }else{
+                // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+                formElement.addEventListener('submit', function(e) {
+                // stop the form from doing the default action.
+                e.preventDefault();
+                // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+                feedbackElement.innerHTML = "I'm sorry, nothing about "+ btSearch.value +" has been found!";
+                // make the feedback element visible.
+                feedbackElement.style.display = "block";
+                // add a class to move everything down so our message doesn't cover it.
+                document.body.classList.toggle('moveDown');
+            });
+
+            }
+        })
+
+        
+    </script>
 </body>
 
 </html>

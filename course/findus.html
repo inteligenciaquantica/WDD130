@@ -19,37 +19,25 @@
         <h1>Biostatistics - A living course!</h1>
         <h2>Jorge Echeimberg</h2>
         <h2>WDD 130-01</h2>
-       <a class="inner-link" href="contactus.html#footer" name="header" alt="bottom">&or;</a>
+        <a class="inner-link" href="findus.html#footer" name="header" alt="bottom">&or;</a>
     </header>
     <main>
 
         <hr />
-        <h2>Contact Us</h2>
+        <h2>Find us</h2>
+        <p>
+            Address: 20-22 Brompton Road, Knightsbridge, London SW1X UK </p>
+        <p>Email: bio@biostat.co.uk</p>
+        <p>Phone: +44 7379 392 540</p>
 
 
 
+        <div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.6531836197983!2d-0.16415048473261623!3d51.501231579634045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760538fb0dd601%3A0x3d4586355212896f!2s20-22%20Brompton%20Rd%2C%20London%20SW1X%207QN%2C%20Reino%20Unido!5e0!3m2!1spt-BR!2sbr!4v1655595825906!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-        <div id="feedback"></div>
-        <div id="form-one">
-            <form action="contactus.html" method="post">
-                <ul>
-                    <li>
-                        <label for="name">Name :</label>
-                        <input type="text" id="name" name="user_name">
-                    </li>
-                    <li>
-                        <label for="mail">E-mail:</label>
-                        <input type="email" id="mail" name="user_email">
-                    </li>
-                    <li>
-                        <label for="msg">Message:</label>
-                        <textarea id="msg" name="user_message">Type your message here!</textarea>
-                    </li>
-                    <li>
-                        <button id="button-submit" type="submit">Send your message</button>
-                    </li>
-                </ul>
-            </form>
         </div>
 
         <h3>Navigation</h3>
@@ -102,33 +90,8 @@
                 <img src="images/instagram.png" alt="instagram icon">
             </a>
         </div>
-        <a class="inner-link" href="contactus.html#header" name="footer" alt="top">&and;</a>
+        <a class="inner-link" href="findus.html#header" name="footer" alt="top">&and;</a>
     </footer>
-
-    <script>
-        // get the feedback div element so we can do something with it.
-        const feedbackElement = document.getElementById('feedback');
-        // get the form so we can read what was entered in it.
-        const formElement = document.forms[0];
-        // get the textarea input
-        const textArea = document.getElementById('msg');
-        // add a 'listener' to wait for a mouse click on textarea
-        textArea.addEventListener('click',function(){
-            textArea.value='';
-        })
-
-        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
-        formElement.addEventListener('submit', function(e) {
-            // stop the form from doing the default action.
-            e.preventDefault();
-            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
-            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
-            // make the feedback element visible.
-            feedbackElement.style.display = "block";
-            // add a class to move everything down so our message doesn't cover it.
-            document.body.classList.toggle('moveDown');
-        });
-    </script>
 </body>
 
 </html>
