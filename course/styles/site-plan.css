@@ -77,7 +77,7 @@ header {
   text-align: center;
   color: var(--paragraph-color-on-color);
   /*background-color: var(--paragraph-background-color);*/
-  background: url(images/biostatistics.png);
+  background: url(/course/images/biostatistics.png);
   background-repeat: no-repeat;
   background-size: 100% 120%;
   border-radius: 25px;
