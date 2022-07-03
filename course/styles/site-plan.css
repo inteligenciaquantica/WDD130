@@ -364,3 +364,27 @@ textarea{
 .inner-link:hover{
   color:#c5efcb;
 }
+
+/*.header-class{
+  display:grid;
+  grid-template-rows: 50% 50%;
+}
+*/
+.nav-class{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: 50px;
+  grid-gap: 10px;
+  background-color: #69c29a;
+  padding: 10px;
+  
+}
+
+.social{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: 50px;
+  grid-gap: 10px;
+  background-color: #69c29a;
+  padding: 10px;
+}
