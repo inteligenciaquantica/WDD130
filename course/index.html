@@ -1,110 +1,219 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
-  <meta charset="utf-8" />
-  <title>Site Plan</title>
-  <link type="text/css" rel="stylesheet" href="styles/site-plan.css" />
+<head class="header-class">
+    <meta charset="utf-8" />
+    <title>Site Plan</title>
+    <link type="text/css" rel="stylesheet" href="styles/testcss.css" />
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="#"><img class="logo-box" alt="My Logo" src="images/logo.png" /></a>
-      <a href="index.html">Home</a>
-      <a href="samples.html">Samples</a>
-      <a href="contactus.html">Contact Us</a>
-      <a href="findus.html">Find Us</a>
-    </nav>
-    <h1>Biostatistics - A living course!</h1>
-    <h2>Jorge Echeimberg</h2>
-    <h2>WDD 130-01</h2>
-    <a class="inner-link" href="index.html#footer" name="header" alt="bottom">&or;</a>
-  </header>
-  <main>
+    <header>
+        <nav class="topnav">
+            <a href="#"><img class="logo-box" alt="My Logo" src="images/logo.png" /></a>
+            <a class="active" href="index.html">Home</a>
+            <a href="samples.html">Samples</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="findus.html">Find Us</a>
+            <a class="inner-link" href="index.html#footer" name="header" alt="bottom">&or;</a>
+            <div class="login-container">
+                <form action="#">
+                    <input type="text" id="user" placeholder="Username" name="username">
+                    <input type="text" id="passwd" placeholder="Password" name="psw">
+                    <button id="login" type="submit">Login</button>
+                </form>
+            </div>
+        </nav>
+        <h1>Biostatistics - A living course!</h1>
+        <h2>Jorge Echeimberg</h2>
+        <h2>WDD 130-01</h2>
 
-    <hr />
-    <h2>Overview</h2>
-    <h3>Purpose</h3>
-    <p>
-      Currently, biostatistics is hard for people who do not like math. Especially for people working on
-      health, biostatistics seems like an awful puzzle game. My purpose is to softly teach the basic biostatistics
-      concepts such as population, sample, sampling, probability distributions, hypothesis tests, and so
-      forth by using simple information technology resources so that the learning is maximized.
-    </p>
+    </header>
+    <main>
+        <div id="feedback"></div>
+        <hr />
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1/3 (<a href='https://www.freepik.com/vectors/statistics-infographic'>Statistics
+                        infographic vector created by pikisuperstar - www.freepik.com</a>)</div>
+                <img src="images/bio1.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3 (<a
+                        href='https://www.freepik.com/photos/performance-management'>Performance management photo
+                        created by our-team - www.freepik.com</a>)</div>
+                <img src="images/bio2.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3 (<a href='https://www.freepik.com/photos/data-analyst'>Data analyst photo
+                        created by pressfoto - www.freepik.com</a>)</div>
+                <img src="images/bio3.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <hr />
+        <h2>Overview</h2>
+        <h3>Purpose</h3>
+        <p>
+            Currently, biostatistics is hard for people who do not like math. Especially for people working on
+            health, biostatistics seems like an awful puzzle game. My purpose is to softly teach the basic biostatistics
+            concepts such as population, sample, sampling, probability distributions, hypothesis tests, and so
+            forth by using simple information technology resources so that the learning is maximized.
+        </p>
+
+
+        <h3>Audience</h3>
+        <p>
+            This course is towards all people who want to learn biostatistics such as doctors, physicstherapeutics,
+            psichologists, nutritionists, biologystis, scientists, and anyone who desire to aquire this kind of
+            knowledgement. The majority of the biostatistics courses have been teaching by using boring resources
+            and/or hard language. My course is based on experimental biostatistics thanks the computational simulation
+            that creates clever online trials where the student can assessment herself or himself. The virtual
+            laboratory is
+            compunded by a lot of virtual experiments. Although, each experiment reflects the reality because it was
+            developed by randomness. All classes are watched by any personal computer, cell phone, lap-top, and so
+            forth.
+
+        </p>
+
+        <h3>Samples</h3>
+        <p>
+            Samples will show you how the course and the technological resources will improve your learning.
+            The computational simulation tools are essential didactic methods capable of improving your
+            learning experience during the classes. You will improve your biostatistics skills by using our
+            simulators. Try <a class="link-button" href="samples.html">here!</a>
+        </p>
+
+        <h3>Contact us</h3>
+        <p>
+            Browse and rate our content and teaching methods, please. Your opinions and suggestions are important to us.
+            As always, we are improving our services for you! Try <a class="link-button" href="contactus.html">here!</a>
+        </p>
+
+        <hr />
+        <h2>Site Map</h2>
+        <div class="sitemap">
+            <div class="sm-home">Home&nbsp;&nbsp;Samples&nbsp;&nbsp;Contact Us&nbsp;&nbsp;Find us </div>
+        
+        </div>
+        <hr />
+
+    </main>
+    <footer class="footer-container">
+        <h3><a href="samples.html">Samples</a></h3>
+        <h3><a href="contactus.html">Contact Us</a></h3>
+        <h3><a href="findus.html">Find Us</a></h3>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="fb icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="twitter icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="instagram icon">
+            </a>
+        </div>
+        <h3><a class="inner-link" href="index.html#header" name="footer" alt="top">&and;</a></h3>
+        <h3 class="footer-bottom"> Bio&sum;tat &copy; 2022 - Jorge Echeimberg</h3>
+    </footer>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+<script>
+    // get the feedback div element so we can do something with it.
+    const user = document.getElementById('user');
+    const pass = document.getElementById('passwd');
+    // get the form so we can read what was entered in it.
+    const formElement = document.forms[0];
+    // get the textarea input
+    const btLogin = document.getElementById('login');
+    const feedbackElement = document.getElementById('feedback');
     
+    // add a 'listener' to wait for a mouse click on textarea
+    btLogin.addEventListener('click', function () {
+        if (user.value == '' || pass.value == '' ) {
+            // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+            formElement.addEventListener('submit', function (e) {
+                // stop the form from doing the default action.
+                e.preventDefault();
+                // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+                feedbackElement.innerHTML = 'Hello, you need to write down your login and/or password!';
+                feedbackElement.style.color = 'red';
+                // make the feedback element visible.
+                feedbackElement.style.display = "block";
+                // add a class to move everything down so our message doesn't cover it.
+                document.body.classList.toggle('moveDown');
+            });
+        } else {
+            // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+            formElement.addEventListener('submit', function (e) {
+                // stop the form from doing the default action.
+                e.preventDefault();
+                // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+                feedbackElement.innerHTML = "I'm sorry, nothing about " + btSearch.value +
+                    " has been found!";
+                feedbackElement.style.color = 'red';
+                // make the feedback element visible.
+                feedbackElement.style.display = "block";
+                // add a class to move everything down so our message doesn't cover it.
+                document.body.classList.toggle('moveDown');
+            });
 
-    <h3>Audience</h3>
-    <p>
-      This course is towards all people who want to learn biostatistics such as doctors, physicstherapeutics,
-      psichologists, nutritionists, biologystis, scientists, and anyone who desire to aquire this kind of
-      knowledgement. The majority of the biostatistics courses have been teaching by using boring resources
-      and/or hard language. My course is based on experimental biostatistics thanks the computational simulation
-      that creates clever online trials where the student can assessment herself or himself. The virtual laboratory is
-      compunded by a lot of virtual experiments. Although, each experiment reflects the reality because it was
-      developed by randomness. All classes are watched by any personal computer, cell phone, lap-top, and so forth.
-
-    </p>
-
-
-
-
-
-    <!-- ------------------------Step 13------------------------------ -->
-
-    <h3>Navigation</h3>
-    <!-- Think about how you want your navigation bar to look. In the site-plan.css file change the colors to your colors to get the look you desire. -->
-
-    <hr />
-    <h2>Site Map</h2>
-    <div class="sitemap">
-      <div class="sm-home">Home</div>
-      <div class="sm-page2">Samples</div>
-      <div class="sm-page3">Contact Us</div>
-      <div class="sm-page4">Find Us</div>
-
-      <div class="top">&nbsp;</div>
-      <div class="left">&nbsp;</div>
-      <div class="right">&nbsp;</div>
-    </div>
-    <hr />
-
-
-
-    <h3>Samples</h3>
-    <p>
-      Samples will show you how the course and the technological resources will improve your learning.
-      The computational simulation tools are essential didactic methods capable of improving your
-      learning experience during the classes. You will improve your biostatistics skills by using our
-      simulators. Try <a href="samples.html">here!</a>
-    </p>
-
-    <h3>Contact us</h3>
-    <p>
-      Browse and rate our content and teaching methods, please. Your opinions and suggestions are important to us.
-      As always, we are improving our services for you! Try <a href="contactus.html">here!</a>
-    </p>
-
-    <img src="images/wireframe_1.png" alt="page 2 wireframe">
-  </main>
-  <footer>
-    <h3> Bio&sum;tat &copy; 2022 - Jorge Echeimberg</h3>
-    <h3><a href="samples.html">Samples</a></h3>
-    <h3><a href="contactus.html">Contact Us</a></h3>
-    <h3><a href="findus.html">Find Us</a></h3>
-    <div class="social">
-      <a href="https://facebook.com" target="_blank">
-        <img src="images/facebook.png" alt="fb icon">
-      </a>
-      <a href="https://twitter.com" target="_blank">
-        <img src="images/twitter.png" alt="twitter icon">
-      </a>
-      <a href="https://instagram.com" target="_blank">
-        <img src="images/instagram.png" alt="instagram icon">
-      </a>
-    </div>
-    <a class="inner-link" href="index.html#header" name="footer" alt="top">&and;</a>
-  </footer>
+        }
+    })
+</script>
 </body>
 
 </html>
