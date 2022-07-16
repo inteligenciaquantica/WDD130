@@ -209,6 +209,40 @@ hearder {
   text-align: center;
 }
 
+.contact-us{
+  float: none;
+  display:grid;
+  grid-template-columns: 100px auto;
+  grid-template-rows: 20px 20px 50px 40px;
+  grid-row-gap: 5px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #69c29a;
+  border-radius: 10px;
+}
+
+.contact-us input, textarea{
+  border-radius: 5px;
+} 
+.contact-us button{ 
+  grid-column: 2/3;
+  grid-row: 4/5;
+  text-align: center;
+  width: 30%;
+  margin: 0;
+  padding: 20px;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #555;
+  color: white;
+  font-size: 17px;
+
+}
+
+.contact-us button:hover{
+  background-color: green;
+}
+
 
 @media screen and (max-width: 600px) {
     .topnav .login-container {
