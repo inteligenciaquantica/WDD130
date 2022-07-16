@@ -9,20 +9,28 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="topnav">
             <a href="#"><img class="logo-box" alt="My Logo" src="images/logo.png" /></a>
-            <a href="index.html">Home</a>
+            <a class="active" href="index.html">Home</a>
             <a href="samples.html">Samples</a>
             <a href="contactus.html">Contact Us</a>
             <a href="findus.html">Find Us</a>
+            <a class="inner-link" href="findus.html#footer" name="header">&or;</a>
+            <div class="login-container">
+                <form action="#">
+                    <input type="text" id="user" placeholder="Username" name="username">
+                    <input type="text" id="passwd" placeholder="Password" name="psw">
+                    <button id="login" type="submit">Login</button>
+                </form>
+            </div>
         </nav>
         <h1>Biostatistics - A living course!</h1>
         <h2>Jorge Echeimberg</h2>
         <h2>WDD 130-01</h2>
-        <a class="inner-link" href="findus.html#footer" name="header" alt="bottom">&or;</a>
+
     </header>
     <main>
-
+        <div id="feedback"></div>
         <hr />
         <h2>Find us</h2>
         <p>
@@ -40,8 +48,6 @@
 
         </div>
 
-        <h3>Navigation</h3>
-
         <hr />
         <h2>Site Map</h2>
         <div class="sitemap">
@@ -50,9 +56,6 @@
             <div class="sm-page3">Contact Us</div>
             <div class="sm-page4">Find Us</div>
 
-            <div class="top">&nbsp;</div>
-            <div class="left">&nbsp;</div>
-            <div class="right">&nbsp;</div>
         </div>
         <hr />
 
@@ -63,22 +66,21 @@
             Samples will show you how the course and the technological resources will improve your learning.
             The computational simulation tools are essential didactic methods capable of improving your
             learning experience during the classes. You will improve your biostatistics skills by using our
-            simulators. Try <a href="samples.html">here!</a>
+            simulators. Try <a class="link-button" href="samples.html">here!</a>
         </p>
 
         <h3>Contact us</h3>
         <p>
             Browse and rate our content and teaching methods, please. Your opinions and suggestions are important to us.
-            As always, we are improving our services for you! Try <a href="contactus.html">here!</a>
+            As always, we are improving our services for you! Try <a class="link-button" href="contactus.html">here!</a>
         </p>
 
-        <img src="images/wireframe_1.png" alt="page 2 wireframe">
+
     </main>
-    <footer>
-        <h3> Bio&sum;tat &copy; 2022 - Jorge Echeimberg</h3>
+    <footer class="footer-container">
+        <h3><a href="index.html">Home</a></h3>
         <h3><a href="samples.html">Samples</a></h3>
         <h3><a href="contactus.html">Contact Us</a></h3>
-        <h3><a href="findus.html">Find Us</a></h3>
         <div class="social">
             <a href="https://facebook.com" target="_blank">
                 <img src="images/facebook.png" alt="fb icon">
@@ -90,8 +92,88 @@
                 <img src="images/instagram.png" alt="instagram icon">
             </a>
         </div>
-        <a class="inner-link" href="findus.html#header" name="footer" alt="top">&and;</a>
+        <h3><a class="inner-link" href="findus.html#header" name="footer">&and;</a></h3>
+        <h3 class="footer-bottom"> Bio&sum;tat &copy; 2022 - Jorge Echeimberg</h3>
     </footer>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    <script>
+        // get the feedback div element so we can do something with it.
+        const user = document.getElementById('user');
+        const pass = document.getElementById('passwd');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // get the textarea input
+        const btLogin = document.getElementById('login');
+        const feedbackElement = document.getElementById('feedback');
+
+        // add a 'listener' to wait for a mouse click on textarea
+        btLogin.addEventListener('click', function () {
+            if (user.value == '' || pass.value == '') {
+                // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+                formElement.addEventListener('submit', function (e) {
+                    // stop the form from doing the default action.
+                    e.preventDefault();
+                    // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+                    feedbackElement.innerHTML =
+                        'Hello, you need to write down your login and/or password!';
+                    feedbackElement.style.color = 'red';
+                    // make the feedback element visible.
+                    feedbackElement.style.display = "block";
+                    // add a class to move everything down so our message doesn't cover it.
+                    document.body.classList.toggle('moveDown');
+                });
+            } else {
+                // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+                formElement.addEventListener('submit', function (e) {
+                    // stop the form from doing the default action.
+                    e.preventDefault();
+                    // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+                    feedbackElement.innerHTML = "I'm sorry, nothing about " + btSearch.value +
+                        " has been found!";
+                    feedbackElement.style.color = 'red';
+                    // make the feedback element visible.
+                    feedbackElement.style.display = "block";
+                    // add a class to move everything down so our message doesn't cover it.
+                    document.body.classList.toggle('moveDown');
+                });
+
+            }
+        })
+    </script>
 </body>
 
 </html>
